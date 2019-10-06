@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="Author" content="xMio">
+    <meta name="keywords" content="仿网易云播放界面">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--顶部-->
+        <header>
+            <!--logo-->
+            <div class="logo_img left"></div>
+            <!--左右箭头-->
+            <div class="arrow left">
+                <i class="iconfont icon-arrow-right arrows arrow-left"></i>
+                <i class="iconfont icon-arrow-left arrows"></i>
+            </div>
+            <!--搜索框-->
+            <div class="inp left">
+                <input type="text" placeholder="搜索音乐，视频，歌词，电台">
+                <i class="iconfont icon-sousuo right sousuo"></i>
+            </div>
+            <!--右边登录部分-->
+            <div class="login right">
+                <!--登录部分-->
+                <div class="icon_sign left" id="sigin">
+                    <!--头像-->
+                    <div class="l_sign left">
+                        <img src="img/denglu.png" alt="" id="deng">
+                    </div>
+                    <!--登录名-->
+                    <p class="left l_name" id="lu">未登录</p>
+                </div>
+                <!--设置背景颜色-->
+                <div class="bgcolor left">
+                    <input type="color" id="color" value="#da0012">
+                </div>
+                <!--一些小图标-->
+                <div class="letter right">
+                    <!--私信-->
+                    <i class="iconfont icon-xinfeng" title="私信"></i>
+                    <!--设置-->
+                    <i class="iconfont icon-shezhi" title="设置"></i>
+                    <!--min模式-->
+                    <i class="iconfont icon-min" title="min模式"></i>
+                    <!--最小化-->
+                    <i class="iconfont icon-zuixiaohua" title="最小化"></i>
+                    <!--最大化-->
+                    <i class="iconfont icon-zuidahua" title="最大化"></i>
+                    <!--关闭-->
+                    <i class="iconfont icon-guanbi" title="关闭"></i>
+                </div>
+            </div>
+        </header>
+        <!--main-->
+        <main>
+            <div class="m_top">
+                <!--歌曲图片滚动部分-->
+                <aside class="left">
+                    <!--歌曲图片-->
+                    <div class="song_img" id="song_img">
+                        <img src="img/hqz.jpg" alt="" class=" ">
+                    </div>
+                    <!--下面一些图标-->
+                    <div class="icons">
+                        <ul>
+                            <li><a href="javascript:void(0);"><i class="iconfont icon-xihuan"></i><span>喜欢</span></a></li>
+                            <li><a href="javascript:void(0);"><i class="iconfont icon-shoucang"></i><span>收藏</span></a></li>
+                            <li><a href="javascript:void(0);"><i class="iconfont icon-xiazai"></i><span>下载</span></a></li>
+                            <li><a href="javascript:void(0);"><i class="iconfont icon-fenxiang"></i><span>分享</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <!--歌曲详情-->
+                <article class="left">
+                    <div class="songS">
+                        <!--歌名-->
+                        <p class="song_name left">way back home</p>
+                        <!--收起音乐详情页-->
+                        <button type="button" class="left"><i class="iconfont icon-shouqi"></i></button>
+                    </div>
+                    <!--专辑-->
+                    <div class="suggest">
+                        <span class="album">专辑：<a href="javascript:void(0);">黑崎子翻唱合集</a></span>
+                        <span class="singer">歌手：<a href="javascript:void(0);">黑崎子</a></span>
+                        <span class="source">来源：<a href="javascript:void(0);">我的下载音乐</a></span>
+                    </div>
+                    <!--歌词-->
+                    <div class="lyric left" id="lyric">
+                        <div class="content" id="content">
+                           <!--歌词-->
+                        </div>
+                    </div>
+                    <!--快进快退0.5s-->
+                    <div class="fast left">
+                        <i class="iconfont icon-kuaijin2-copy" title="后退0.5s"></i>
+                        <i class="iconfont icon-kuaijin2" title="前进0.5s"></i>
+                        <i class="iconfont icon-wenhao doubt" title="报错"></i>
+                    </div>
+
+                </article>
+            </div>
+           <div class="mask"></div>
+            <!--听友评论-->
+            <div class="comment">
+                <aside class="left">
+                    <p class="c_head">
+                        <a href="javascript:;">听友评论</a>
+                        <span>（已有1423条评论）</span>
+                    </p>
+                    <!--写评论-->
+                    <p class="w_comment">
+                        <i class="iconfont icon-bi" id="bi"></i>
+                        发表评论
+                        <i class="iconfont icon-aite right"></i>
+                        <i class="iconfont icon-xiaolian right"></i>
+                    </p>
+                    <!--精彩评论-->
+                    <p class="brilliant">精彩评论</p>
+                    <div class="b_discuss" id="discuss">
+                            <!--评论内容-->
+                    </div>
+                </aside>
+                <article class="left">
+                    <img src="img/side.png" alt="">
+                </article>
+            </div>
+        </main>
+        <footer>
+            <!--控制台-->
+            <div class="control left">
+                <a href="javascript:void(0);"><i class="iconfont icon-zuobofang1" title="上一首"></i></a>
+                <a href="javascript:void(0);"><i class="iconfont icon-bofang2 laodao66"></i></a>
+                <a href="javascript:void(0);"><i class="iconfont icon-youbofang1" title="下一首"></i></a>
+            </div>
+            <!--进度条-->
+            <div class="player_music__time1 left">00:00</div>
+            <div class="pro left">
+                <div class="player_progress__load"></div>
+                <div class="player_progress__play">
+                    <i class="iconfont icon-dot1"></i>
+                </div>
+            </div>
+            <div class="player_music__time left">00:00</div>
+            <!--音量-->
+            <!--声量-->
+            <div class="player_voice_box left">
+                <a href="javascript:void(0);" class="vol left"><i class="icon-yinliang2 iconfont" title="播放"></i></a>
+                <div class="player_voice left">
+                    <div class="player_voice_load"></div>
+                    <div class="player_voice__play">
+                        <i class="player_voice__dot"></i>
+                    </div>
+                </div>
+            </div>
+            <!--模式-->
+            <div class="song_madol left">
+                <i class="iconfont icon-danquxunhuan" title="单曲播放" id="circulate" name="type1"></i>
+                <!--<i class="iconfont icon-liebiaoxunhuan" title="列表循环"></i>
+                <i class="iconfont icon-danquxunhuan" title="单曲循环"></i>-->
+            </div>
+            <!--桌面歌词-->
+            <div class="lrc left" id="open_desk">
+                <i class="iconfont icon-ci-copy" title="打开歌词"></i>
+                <!--<i class="iconfont icon-ci1" title="关闭歌词"></i>-->
+            </div>
+            <!--播放列表-->
+            <div class="play_list left">
+                <i class="iconfont icon-plist" title="打开播放列表"></i>
+            </div>
+        </footer>
+        <!--播放列表-->
+        <div class="plist" id="plist" title="1">
+            <div class="choose">
+                <div class="gb right">
+                    <i class="iconfont icon-guanbi"></i>
+                </div>
+                <div class="choice left">
+                    <button type="button" class="sele">播放列表</button>
+                    <button type="button">历史记录</button>
+                </div>
+            </div>
+            <!--详情页-->
+            <ul class="details" id="details">
+
+            </ul>
+        </div>
+        <!--登录-->
+        <div id="login">
+            <div class="l_title">
+                <p class="left" title="1">返回账号和密码登录</p>
+                <i class="iconfont icon-guanbi right" id="guanbi"></i>
+            </div>
+            <div class="l_body erweima" id="erweima">
+                <p>扫码登录</p>
+                <div class="imgs">
+                    <img src="img/erweima.png" alt="">
+                </div>
+            </div>
+            <div class="l_body pass" id="pass">
+                <div class="imgd">
+                    <!--<img src="img/phones.png" alt="">-->
+                </div>
+                <div class="l_xq">
+                    <form action="">
+                        <input type="text" placeholder="请输入手机号" id="phones">
+                        <input type="text" placeholder="请输入密码" id="password">
+                        <img src="img/logins.png" alt="" id="logins">
+                    </form>
+                </div>
+                <div class="l_qt">
+                    <p><span>------</span>其他登录方式<span>------</span></p>
+                    <div class="q_n">
+                        <i class="iconfont icon-weixin greens" title="微信"></i>
+                        <i class="iconfont icon-qq blues" title="qq" ></i>
+                        <i class="iconfont icon-weibo reds" title="微博"></i>
+                        <i class="iconfont icon-yizhifu reds" title="网易邮箱"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--写评论-->
+        <div class="write" id="write">
+            <p class="song left">歌曲：<span>爱的方向</span></p>
+            <div class="gb right" id="gbi">
+                <i class="iconfont icon-guanbi"></i>
+            </div>
+            <label>
+                <textarea name="" id="txt" cols="30" rows="10" placeholder="发表评论"></textarea>
+            </label>
+            <div class="point">
+                <i class="iconfont icon-xiaolian"></i>
+                <i class="iconfont icon-aite"></i>
+            </div>
+            <button type="button" class="btns" id="btns">评论</button>
+        </div>
+    </div>
+    <!--桌面歌词-->
+    <div class="diek" id="disk"></div>
+
+</body>
+</html>

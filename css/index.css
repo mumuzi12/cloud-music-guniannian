@@ -1,0 +1,852 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+   /* background-color: #666;*/
+}
+.container{
+    width: 1100px;
+    height:548px;
+    margin:0 auto;
+    position:relative;
+    top:5px;
+    left:0;
+    overflow: hidden;
+    border:1px solid red;
+}
+i,em{
+    font-style: normal;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+/*顶部*/
+header{
+    width: 1100px;
+    height:50px;
+    border-bottom:1px solid red;
+    background-color: #da0012;
+    z-index:9999;
+    position:absolute;
+    top:0;
+    left:0;
+}
+/*logo_img*/
+.logo_img{
+    width: 160px;
+    height: 33px;
+    margin:8px 20px;
+    background:url("../img/topbar.png") 0 -19px no-repeat;
+}
+/*左右箭头*/
+.arrow{
+    width: 66px;
+    height: 25px;
+    margin-top:13px;
+    border:1px solid #ccc;
+    border-radius: 10%;
+}
+.arrows{
+    width: 30px;
+    height: 25px;
+    display:inline-block;
+    text-align:center;
+    line-height: 25px;
+    color:rgba(255,255,255,0.7);
+}
+.arrows:hover{
+    color:#fff;
+}
+.arrow-left{
+    border-right:1px solid #ccc;
+}
+/*搜索框*/
+.inp,input{
+    height: 20px;
+    background-color: rgba(255,255,255,0.4);
+}
+.inp{
+    width: 230px;
+    margin-top:15px;
+    margin-left:20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+
+}
+.inp input{
+    width: 200px;
+    display:inline-block;
+    background: none;
+    margin-left:10px;
+    outline: none;
+    border:none;
+}
+.inp .sousuo{
+    text-align:center;
+    line-height: 20px;
+    cursor: pointer;
+}
+/*鼠标放上去改变颜色*/
+.inp .sousuo:hover,.l_name:hover,.letter i:hover{
+    color:#fff;
+}
+/*右边登录部分*/
+.login{
+    width: 460px;
+    height: 30px;
+    margin-top:10px;
+}
+.icon_sign{
+    width: 120px;
+    height: 30px;
+}
+.icon_sign .l_sign{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.icon_sign .l_sign img{
+    width: 30px;
+    border-radius: 100%;
+}
+.l_name{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size:14px;
+    margin-left:5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+/*背景色*/
+.bgcolor{
+    width: 40px;
+    height: 30px;
+    margin-left:20px;
+}
+.bgcolor #color{
+    width: 40px;
+    height: 30px;
+    border:none;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+}
+input[type=color]::-webkit-color-swatch-wrapper{
+    background-color:#ffffff;
+}
+input[type=color]::-webkit-color-swatch{
+    position: relative;
+}
+.letter{
+    width:194px;
+    height: 30px;
+}
+/*一些小图标*/
+.letter i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left:10px;
+    color:rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+/*主体*/
+main{
+    width: 1100px;
+    height: 452px;
+    position:absolute;
+    top:50px;
+    left:0;
+    overflow:auto;
+    overflow-x:hidden;
+}
+.m_top{
+    width: 1100px;
+    height: 400px;
+    z-index: 2;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.mask{
+    width: 1100px;
+    height: 400px;
+    background-image: url("../img/yltf.jpg");
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-filter: blur(65px);
+    filter: blur(65px);
+    opacity: .5;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index:1;
+}
+/*歌曲图片*/
+.m_top aside{
+    width: 480px;
+    height: 400px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+ .m_top aside .song_img{
+    width: 300px;
+    height: 300px;
+    margin:20px auto;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+.m_top aside .song_img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin:40px;
+    border:10px solid #000;
+}
+.m_top aside .movers{
+    -webkit-animation:ravovle 150s linear 0s infinite;
+}
+.m_top aside .mover{
+    -webkit-animation:ravovle 100s linear 0s infinite;
+}
+@-webkit-keyframes ravovle{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(720deg);
+    }
+}
+/*下面一些图标*/
+.m_top aside .icons{
+    width: 340px;
+    height: 40px;
+    margin:0 auto;
+}
+.m_top aside .icons ul li{
+    width: 70px;
+    height: 30px;
+    float:left;
+    line-height: 30px;
+    border:1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right:10px;
+}
+.icons ul li a{
+    color:#555;
+}
+.icons ul li a:hover i{
+    color:#000;
+}
+.icons ul li i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin:0 5px;
+}
+/*歌词部分*/
+.m_top article{
+    width:615px;
+    height: 400px;
+    position:absolute;
+    left:480px;
+    top:0;
+}
+/*歌名*/
+.songS{
+    width: 100%;
+    height: 40px;
+}
+.song_name{
+    font-size:20px;
+    height: 30px;
+    line-height: 30px;
+    margin-left:20px;
+    width: 500px;
+}
+.songS button{
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-top:5px;
+    cursor: pointer;
+}
+.songS button i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size:24px;
+}
+/*专辑*/
+.suggest{
+    width: 100%;
+    height: 30px;
+    font-size:14px;
+    margin-left:20px;
+}
+.suggest span{
+    display:inline-block;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+
+}
+/*歌词*/
+.lyric{
+    width: 450px;
+    height: 310px;
+    margin-left:20px;
+    position: relative;
+
+}
+.lyric .content{
+    width: 400px;
+    height: 300px;
+    overflow:auto;
+    overflow-x:hidden;
+    padding: 5px 18px 5px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lyric .content p{
+    height: 30px;
+    line-height: 30px;
+    font-size:14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.lyric .content .select{
+    color:#da0012;
+}
+/*箭头*/
+.fast{
+    width: 30px;
+    height: 300px;
+    margin-left:10px;
+    position:relative;
+}
+.fast i{
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    text-align:center;
+    font-size:20px;
+    cursor: pointer;
+    color:#aaa;
+    margin-bottom:5px;
+}
+.fast i:hover{
+    color: #999;
+}
+.fast .doubt{
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+/*听友评论*/
+.comment{
+    width: 1060px;
+    height: 540px;
+    position:absolute;
+    top:400px;
+    left:0;
+}
+/*听友评论详情*/
+.comment aside{
+    width: 600px;
+    margin-right:50px;
+}
+.comment aside .c_head{
+    height: 40px;
+    font-size:20px;
+    line-height: 40px;
+    margin-left:60px;
+    border-bottom:1px solid #ccc;
+}
+.c_head a{
+    color:#444;
+}
+.comment aside .c_head span{
+    font-size:14px;
+}
+/*写评论*/
+.comment aside .w_comment{
+    height: 30px;
+    margin:10px 0 10px 60px;
+    border:10px solid #ddd;
+    line-height: 30px;
+    font-size:14px;
+}
+.w_comment i{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+/*精彩评论*/
+.brilliant{
+    height: 30px;
+    margin-left:60px;
+    line-height: 30px;
+    font-size:12px;
+    border-bottom: 1px solid #ccc;
+}
+/*评论兄弟*/
+.b_discuss{
+    width: 540px;
+    height: 500px;
+}
+.discuss{
+    width: 540px;
+    height: 100px;
+    margin-left:60px;
+    font-size:12px;
+    border-bottom:1px solid #ddd;
+    position:relative;
+    top:0;
+    left:0;
+}
+.discuss .d_left{
+    width: 40px;
+    height: 100px;
+}
+.discuss .d_left img{
+    width: 40px;
+    margin:10px;
+    border:1px solid #ddd;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.discuss .d_right{
+    width: 490px;
+    margin-left:5px;
+}
+.discuss .d_right p{
+    margin:10px;
+}
+.discuss .d_right ul li{
+    float:left;
+}
+.discuss .d_right ul li span{
+    margin:0 10px;
+}
+.discuss .d_foot{
+    position:absolute;
+    bottom:5px;
+    left:40px;
+}
+.discuss .d_foot ul{
+    width: 400px;
+    position:absolute;
+    bottom:0;
+    left:300px;
+}
+/*相似*/
+.comment article{
+    width: 440px;
+    height: 500px;
+    position:absolute;
+    top:30px;
+    left:620px;
+}
+footer{
+    width: 1098px;
+    height: 40px;
+    margin:0 auto;
+    border-top:1px solid #999;
+    background-color: #fff;
+    position:absolute;
+    bottom:10px;
+    left:0;
+    z-index:9999;
+}
+footer .control{
+    width: 200px;
+    height: 40px;
+    margin-left:30px;
+    margin-top:5px;
+}
+footer .control a,footer .control a i{
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+    font-size:20px;
+    color:#fff;
+}
+footer .control a{
+    margin-right:20px;
+}
+footer .control a i{
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: rgba(218,0,18,0.8);
+}
+/*进度条*/
+.player_music__time1{
+    width: 42px;
+    height: 21px;
+}
+.player_music__time1,.player_music__time{
+    margin-top:15px;
+}
+.player_music__time{
+    width: 90px;
+    height: 21px;
+}
+footer .pro{
+    height: 8px;
+    width: 400px;
+    cursor: pointer;
+    background: rgba(225, 225, 225, .8);
+    color: rgba(225, 225, 225, .2);
+    margin-top: 21px;
+    position: relative;
+    border-radius: 10px;
+    border:1px solid red;
+}
+.player_progress__load {
+    height: 8px;
+    background: rgba(255, 255, 255, .2);
+}
+
+.player_progress__play {
+    height: 8px;
+    /*width: 100px;*/
+    background: rgba(218,0,18,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.pro i {
+    width: 10px;
+    height: 10px;
+    background:rgba(218,0,18,0.8);
+    position: absolute;
+    right: -7px;
+    top: 0;
+    border-radius: 100%;
+}
+/*音量*/
+.player_voice_box {
+    width:150px;
+    margin-left: 20px;
+    margin-top:15px;
+}
+
+.player_voice_box a i {
+    font-size: 24px;
+   color:#666;
+}
+
+.player_voice {
+    width: 100px;
+    height: 8px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.player_voice_load {
+    width: 50px;
+    height: 4px;
+    background: #999;
+}
+
+.player_voice__play {
+    height: 4px;
+    width: 30px;
+    background: rgba(218,0,18,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.player_voice__dot {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background: #999;
+    position: absolute;
+    right:-4px;
+    top: -2px;
+    border-radius: 100%;
+}
+/*播放模式*/
+.song_madol,.lrc,.play_list{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    margin-top:10px;
+    margin-left:20px;
+    cursor: pointer;
+}
+#circulate{
+    font-size:24px;
+    color:#000;
+}
+/*桌面歌词*/
+.lrc i,.play_list i{
+    font-size:24px;
+    color:#000;
+}
+/*播放列表*/
+.plist{
+    width: 400px;
+    height: 400px;
+    border:1px solid #ccc;
+    z-index:9999;
+    background-color: #fff;
+    position: absolute;
+    bottom:40px;
+    right:20px;
+    display:none;
+    overflow:auto;
+}
+.plist .choose{
+    width: 100%;
+    height: 30px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ccc;
+}
+.plist .gb{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+}
+.plist .gb i{
+    font-size:20px;
+}
+.plist .choice{
+    width: 210px;
+    height: 30px;
+    margin-left:80px;
+}
+.plist .choice button{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: #fff;
+    color:#666;
+}
+.plist .choice .sele{
+    background-color: #666;
+    color:#fff;
+}
+.plist .details{
+    width: 100%;
+    height: 350px;
+}
+.plist .details li{
+    width:100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eef;
+    cursor: pointer;
+    margin-bottom:5px;
+}
+.plist .details li p{
+    width: 200px;
+}
+.plist .details li span{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*登录*/
+#login{
+    width: 300px;
+    height: 400px;
+    border:1px solid #666;
+    background: #fff;
+    position:absolute;
+    top:60px;
+    left:300px;
+    z-index:99999;
+    overflow:hidden;
+    display:none;
+}
+.l_title{
+    height: 30px;
+}
+.l_title p,.l_title i{
+    cursor: pointer;
+}
+.l_body{
+    height: 360px;
+}
+/*扫码登录*/
+.erweima p{
+    width: 100px;
+    margin:20px auto;
+    height: 40px;
+    line-height: 40px;
+    font-size:24px;
+}
+.erweima .imgs{
+    width: 183px;
+    height: 186px;
+    margin:10px auto;
+}
+/*账号密码登录*/
+.pass .imgd{
+    height: 100px;
+    background-image:url("../img/phones.png") ;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pass .l_xq{
+    height: 150px;
+}
+.pass .l_xq input{
+    display:inline-block;
+    width: 200px;
+    height: 40px;
+    margin:0 40px 5px;
+    outline: none;
+    border:0;
+    border:1px solid #999;
+}
+.pass .l_xq img{
+    margin-left:20px;
+}
+.l_qt{
+    height: 110px;
+}
+.l_qt p{
+    height: 30px;
+    width: 200px;
+    margin:10px auto 0;
+    color:#333;
+}
+.l_qt p span{
+    color:#ccc;
+}
+.q_n{
+    height: 60px;
+    width: 200px;
+    margin:10px auto 0;
+}
+.q_n i{
+    height: 40px;
+    width: 40px;
+    font-size:30px;
+    display:inline-block;
+    cursor: pointer;
+}
+.q_n .greens{
+    color:green;
+}
+.q_n .blues{
+    color:#029fe6;
+}
+.q_n .reds{
+    color:#eb5959;
+}
+
+/*写评论*/
+.write{
+    width: 550px;
+    height: 350px;
+    position:absolute;
+    top:100px;
+    left:50px;
+    z-index:9999;
+    border:1px solid #999;
+    background-color: #fff;
+    display:none;
+}
+.write p{
+    height: 30px;
+    width: 200px;
+    font-size:20px;
+    margin:10px 20px;
+}
+.write textarea{
+    width: 500px;
+    height: 200px;
+    outline: none;
+    resize: none;
+    border:1px solid #999;
+    margin:0 20px;
+}
+.write .point{
+    height: 30px;
+    width: 200px;
+    margin:0 20px;
+}
+.write .point i{
+    width: 30px;
+    height: 30px;
+    font-size:24px;
+    cursor: pointer;
+}
+.write .btns{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size:18px;
+    color:#fff;
+    margin-left:400px;
+    background-color: #0c73c2;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+/*桌面歌词*/
+.diek{
+    width: 500px;
+    height: 40px;
+    margin:10px auto;
+    line-height: 40px;
+    text-align:center;
+    color:#da0012;
+    font-size:20px;
+    display:none;
+}
